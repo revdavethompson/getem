@@ -1,0 +1,18 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model VisitorData {
+  id          Int      @id @default(autoincrement())
+  ip          String?
+  userAgent   String?
+  geoData     Json?
+  clientData  Json?
+  timestamp   DateTime @default(now())
+}
