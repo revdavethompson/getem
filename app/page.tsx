@@ -1,7 +1,6 @@
 import HomeContent from "./components/home-content";
 import { headers } from "next/headers";
 import Script from "next/script";
-import Head from "next/head";
 
 export default async function InfoPage() {
   // Wait for the headers() promise to resolve
